@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// Florian :
+
 // Vérifie si une personne est majeure
 bool estMajeur(int age) { 
     return age >= 18;  
@@ -42,6 +44,37 @@ int sommeNombre(int base, int ajout) {
     for (int i = 1; i <= base; i++) somme += i;  
     return somme + ajout;  
 }
+
+// Alexandre :
+
+// Fonction qui vérifie si un nombre est pair ou divisible par 7
+bool estPair(int n) {
+    return (n % 2 == 0) || (n % 7 == 0);
+}
+
+// Fonction qui calcule la somme d'un nombre et de tous ses prédécesseurs, puis ajoute n à la fin
+int sommeNombre(int n) {
+    int somme = 0;
+    for (int i = 1; i <= n; i++) {
+        somme += i;
+    }
+    return somme + n;
+}
+
+// Fonction qui calcule le salaire net à partir du salaire brut
+float salaireNet(float salaireBrut) {
+    float net = salaireBrut * (1 - 0.23);
+    float prime = net * 0.12;
+    return net + prime;
+}
+
+// Fonction qui retourne le plus petit de trois nombres
+int plusPetit(int a, int b, int c) {
+    return (a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c);
+}
+
+
+
 
 int main() {
     // Test des fonctions avec des valeurs exemples
